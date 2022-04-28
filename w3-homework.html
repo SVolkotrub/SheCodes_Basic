@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Volunteers of Kharkiv</title>
+    <style>
+     body{
+         background: #f0ecef;
+     }
+        h1 {
+            color: #1a64d6;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px auto;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+            font-weight: normal;
+            margin: 30px;
+            font-size: 24px;
+            font-family: monospace;
+
+        }
+        h4 {
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            margin: 10px auto;
+            font-size: 24px;
+            font-family: Helvetica, Arial, sans-serif;
+
+        }
+        p {
+            text-align: center;
+            margin: 20px;
+            font-size: 12px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+                 
+        button {
+            margin: 20px auto;
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            background: #4083e7;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            border-radius: 30px;
+            border: 1px solid;
+            box-shadow: 3px 3px 15px #ffffff;
+            border-color: #4d87df;
+            font-family: Helvetica, Arial, sans-serif;
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            background: transparent;
+            color: #3c76ce;
+            cursor: pointer;
+        }
+        div{
+               text-align: center;
+               margin: 20px;
+               font-size: 14px;
+               font-weight: 500;
+               font-family: sans-serif;
+
+           }
+         .colorMain {color: blue;}
+        ul {
+            display: block;
+            list-style: none;
+            text-align: center;
+            padding: 0px;
+
+        }
+
+        li {
+            font-size: 24px;
+            font-weight: 500;
+            padding: 10px 0px;
+            transition: all 200ms ease-in-out;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        
+        li:hover {
+            background: #c8d4db;
+            border-radius: 10px;
+        }
+       img {
+               margin: 0px auto;
+               display: block;
+               width: 200px;
+               padding: 0px;
+           }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Volunteers of Kharkiv ❤️ Help to Kharkiv citizens 💙💛
+    </h1>
+    <h2>
+        Please select a type of assistance:
+    </h2>
+ <div>   
+    <ul>
+        <li >  <h4>Families with children from 0 to 6 years old</h4> 
+    <img src="https://raisingchildren.net.au/__data/assets/image/0024/48840/learning-birth-to-preschool.jpg" alt="Babies"
+        width="200px" />
+    <button type="button" b1 >Apply</button>
+        </li>
+      
+        <li >
+        <h4>Families with children from 7 to 12 years old</h4>
+        <img src="https://c.tadst.com/gfx/750w/un-child-rights.jpg"
+            width="200px" />
+        <button type="button" b2>Apply</button>
+        </li>
+       
+        <li> <h4>Families with children from 13 to 18 years old</h4>
+        <img src="https://mamovediya.com.ua/uploads/content/2018/04/25/source/tsikavi-fakty-pro-pdlitkiv-6651x.jpg" 
+        width="200px" />
+        <button type="button" b3>Apply</button>
+        </li>
+        <li>
+            <h4>The elderly and people with disabilities</h4>
+        <img src="https://s.pfst.net/2015.07/8013160818615d43966a52f4d4afa4db1273b3fcb90_b.jpg"
+            width="200px" />
+            <button type="button" b4>Apply</button>
+        </li>
+    </ul>
+    
+</div>
+<div> <span class="colorMain">E-mail:</span> helpKharkiv@gmail.co <span class="colorMain">Telephone number:</span> +38050xxxxxxx
+</div>
+
+    <p>
+        Coded by Svitlana Volkotrub
+    </p>
+   <script>
+    function updateHeading(name) {
+        let headingH2 = document.querySelector("h2");
+        headingH2.innerHTML = `${name}, your application is accepted. Stay in touch 💙💛 <br> You can leave another request for help. Please select a type of assistance:`;
+        return headingH2.innerHTML;
+    }
+ 
+    function apply() {
+        let name = prompt("Please, enter your name");
+        let telephone = prompt("Enter your telephone number in format +380xxxxxxxxx");
+       alert (`${name}, we will call you back within an hour 📞`)
+        updateHeading(name);  
+        
+    }
+    let applyButton = document.querySelector("button[b1]");
+     applyButton.addEventListener("click", apply);
+     let applyButton2 = document.querySelector("button[b2]");
+     applyButton2.addEventListener("click", apply);
+    let applyButton3 = document.querySelector("button[b3]");
+    applyButton3.addEventListener("click", apply);
+    let applyButton4 = document.querySelector("button[b4]");
+     applyButton4.addEventListener("click", apply);
+            
+    
+</script> 
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather</title>
+    <style>
+        
+        h1 {
+            color: #1a64d6;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin: 0px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+            font-weight: normal;
+            margin: 0px;
+            font-size: 34px;
+            font-family: Helvetica, Arial, sans-serif;
+
+        }
+        h4 {
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            margin: 10px auto;
+            font-size: 24px;
+            font-family: Helvetica, Arial, sans-serif;
+
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+                 
+        button {
+            margin: 20px auto;
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            background: #1a64d6;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            border-radius: 30px;
+            border: 1px solid;
+            box-shadow: 3px 3px 15px #ffffff;
+            border-color: #1a64d6;
+            font-family: Helvetica, Arial, sans-serif;
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            background: transparent;
+            color: #1a64d6;
+            cursor: pointer;
+        }
+
+        ul {
+            display: block;
+            list-style: none;
+            text-align: center;
+            padding: 0px;
+
+        }
+
+        li {
+            font-size: 24px;
+            font-weight: 500;
+            padding: 10px 0px;
+            transition: all 200ms ease-in-out;
+            margin: 0 auto;
+            max-width: 400px;
+        }
+        
+        li:hover {
+            background: #eaf1f5;
+            border-radius: 10px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <h1>
+        🌦
+        <br />
+        Currently 11° in Kharkiv
+    </h1>
+    <h2>
+        10° / <strong>13°</strong>
+    </h2>
+    
+    <ul>
+        <li > <h4>⛅️ Tomorrow</h4> 
+      <p>  10°  /  <strong>15°</strong></p>
+        </li>
+        <li >
+        <h4>☁️ Saturday</h4>
+        <p> 11° / <strong>15°</strong></p>
+        </li>
+        <li> <h4>☀️ Sunday</h4>
+        <p> 13° / <strong>17°</strong></p>
+        </li>
+    </ul>
+    <button>Change city</button>
+   
+    <p>
+        Coded by Svitlana Volkotrub
+    </p>
+   <script>
+
+    function changeCity() {
+        
+        let city = prompt("What city do you live in?");
+        let temperature = prompt("What temperature is it?");
+        let heading = document.querySelector("h1");
+        let headingH2 = document.querySelector("h2");
+        if (temperature >= 0) {
+            heading.innerHTML = `😄 <br> Currently ${temperature}° in ${city}`;
+            headingH2.innerHTML = `${Number(temperature) - 2}° / <strong>${Number(temperature) + 3}</strong>`;
+        } else if (temperature < 0) {
+            heading.innerHTML = `☹️ <br> Currently ${temperature}° in ${city}`;
+            headingH2.innerHTML = `${Number(temperature) - 3}° / <strong>${Number(temperature) + 2}</strong>`;
+        } else {
+            alert ("Temperature is not a number. Please try again and enter a number 😉. If temperature in your city is negative, please enter in right format. For example, -9");
+        }
+    }
+    let applyButton = document.querySelector("button");
+    applyButton.addEventListener("click", changeCity);
+</script> 
+</body>
+
+</html>
